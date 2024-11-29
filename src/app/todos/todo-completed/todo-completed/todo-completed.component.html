@@ -1,0 +1,12 @@
+<div class="checkbox-container">
+    <input
+      type="checkbox"
+      id="todo-checkbox"
+      [checked]="completed"
+        (change)="onCheck()"
+    />
+    <label for="todo-checkbox" [class]="completed ? 'completed' : 'completed not'">
+      {{ completed ? '✔' : '' }}
+    </label>
+  </div>
+  

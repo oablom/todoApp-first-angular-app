@@ -1,0 +1,10 @@
+<div class="title"><h1>Todo list:</h1></div>
+<ul>
+  <li *ngFor="let todo of todos" [ngClass]="{'completed': todo.completed}">
+<app-todo-completed [completed]="todo.completed" (todo)="todoCompletedCheck(todo.id)" ></app-todo-completed>
+  
+ <span [class]="todo.completed ? 'todo-title done' : 'todo-title '"><p> {{ todo.title }}</p> </span>  
+ <button (click)="removeTodo(todo.id)">Remove </button>
+  </li>
+  <div><app-add-todo (todo)="addNewTodo($event)"></app-add-todo></div>
+</ul>

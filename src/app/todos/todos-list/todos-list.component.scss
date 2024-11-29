@@ -1,0 +1,49 @@
+
+li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+align-items: center ;
+padding: 3px;
+
+&.completed {
+    background-color: #e0ffe0; 
+    p {  text-decoration: line-through;}
+  
+    color: gray;
+  }
+
+
+    &.todo-title {
+    width: 80px;
+        flex: 1;
+        background-color: white;
+
+        &.done {
+            background-color: green;
+        }
+
+    }
+
+    
+
+    button {
+        background-color: rgb(246, 113, 113);
+        color: white;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+        width: 80px;
+        &:hover {
+            background-color: rgb(246, 113, 113, 0.8);
+            cursor: pointer;
+        }
+    
+    }
+  
+}
+
+.title {
+    text-align: center;
+}
